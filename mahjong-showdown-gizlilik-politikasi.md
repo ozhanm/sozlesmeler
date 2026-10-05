@@ -1,6 +1,6 @@
 # Mahjong Showdown — Privacy Policy / Gizlilik Politikası
 
-**Last updated / Son güncelleme:** 4 October 2026 / 4 Ekim 2026
+**Last updated / Son güncelleme:** 5 October 2026 / 5 Ekim 2026
 **App / Uygulama:** Mahjong Showdown (`com.mahjongshowdown.app`)
 **Developer / Geliştirici:** Özhan Mengücek
 **Contact / İletişim:** ozhanmengucek@gmail.com
@@ -42,7 +42,7 @@ until you ask for them to be deleted.
 
 ## Data that stays on your phone
 
-Your settings (theme, language, vibration), coins and unlocked tile sets are stored **only on
+Your settings (theme, language, sound, vibration), coins and unlocked tile sets are stored **only on
 your phone** and are never sent to us. They are removed when you uninstall the app.
 
 ---
@@ -79,9 +79,14 @@ under 13.
 
 ## Your rights and deleting your data
 
-To access or correct your data, or to **have your account and all of its data deleted**,
-write to **ozhanmengucek@gmail.com** with your in-game player name. Requests are handled
-within 30 days.
+You can **delete your account and all of its online data yourself** at any time in the game:
+**Settings → Delete my online data**. Your account, player name, country, ranking points and
+match history are removed from the server at once; matches you played are removed for your
+opponents too. Coins, tile sets and settings stay on your phone until you uninstall the app.
+
+To access or correct your data, or to have it deleted without the app, write to
+**ozhanmengucek@gmail.com** with your in-game player name. Requests are handled within 30
+days.
 
 ---
 
@@ -130,7 +135,7 @@ maçlar 30 gün sonra silinir. Hesap ve sıralama verileri, silinmesini isteyene
 
 ### Yalnızca telefonunda kalanlar
 
-Ayarların (tema, dil, titreşim), jetonların ve açtığın taş setleri **yalnızca telefonunda**
+Ayarların (tema, dil, ses, titreşim), jetonların ve açtığın taş setleri **yalnızca telefonunda**
 saklanır, bize gönderilmez. Uygulamayı silince bunlar da silinir.
 
 ### Reklamlar
@@ -159,7 +164,12 @@ Oyun 13 yaş ve üzeri için tasarlanmıştır. 13 yaşından küçüklerden bil
 
 ### Hakların ve verilerinin silinmesi
 
-Verilerine erişmek, düzeltmek ya da **hesabını ve bütün verilerini sildirmek** için
+**Hesabını ve bütün online verilerini istediğin zaman oyunun içinden kendin silebilirsin:**
+**Ayarlar → Online verilerimi sil**. Hesabın, oyuncu adın, ülken, sıralama puanın ve maç
+geçmişin sunucudan hemen silinir; oynadığın maçlar rakiplerinin geçmişinden de kalkar.
+Jetonlar, taş setleri ve ayarlar uygulamayı silene kadar telefonunda kalır.
+
+Verilerine erişmek, düzeltmek ya da uygulama olmadan sildirmek için
 **ozhanmengucek@gmail.com** adresine, oyundaki oyuncu adınla birlikte yaz. Talepler 30 gün
 içinde yerine getirilir.
 
