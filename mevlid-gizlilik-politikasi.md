@@ -1,6 +1,6 @@
 # Vesile — Gizlilik Politikası
 
-**Son güncelleme:** 8 Eylül 2026
+**Son güncelleme:** 15 Ekim 2026
 **Uygulama:** Vesile — Mevlit Rehberi (`com.vesile.mevlid`)
 **İletişim:** destek@carboninteraktif.com
 
@@ -24,7 +24,13 @@ Uygulama şunların **hiçbirini** toplamaz:
 - Kullanım/analitik verisi, çökme raporu, davranış takibi
 - Mikrofon veya kamera kaydı
 
-Uygulamada analitik aracı, reklam ağı veya takip teknolojisi (SDK, piksel, çerez) bulunmaz.
+Uygulamada analitik aracı, reklam ağı veya takip teknolojisi (piksel, çerez) bulunmaz.
+
+Bildirim özelliği için kullanılan kütüphane, uygulama paketine Google'ın **Firebase Messaging**
+bileşenini de getirir. Bu bileşen **yapılandırılmamıştır** — uygulamada `google-services.json`
+dosyası yoktur — dolayısıyla hiç çalışmaz: kayıt kimliği (token) üretmez, Google'ın
+sunucularına bağlanmaz ve hiçbir veri göndermez. Uygulamanın gösterdiği bütün bildirimler
+telefonun kendi içinde kurulur.
 
 ---
 
@@ -39,6 +45,7 @@ Aşağıdakiler yalnızca cihazınızın kendi depolamasında tutulur ve **hiçb
 | Favorileriniz | Metinlere hızlı erişim |
 | Tesbih sayaçlarınız | Zikir sayısının korunması |
 | Seçtiğiniz şehir | Namaz vakti hesabı |
+| Bildirim tercihleriniz (hangi türler, hangi vakitler, kaç dakika önce) | Bildirimlerin kurulması |
 | İndirdiğiniz kıraat ses dosyaları | Çevrimdışı dinleme |
 
 Uygulamayı telefonunuzdan silerseniz bu verilerin tamamı silinir. Dilerseniz tek tek de
@@ -58,6 +65,31 @@ Konum izni **isteğe bağlıdır.**
   arasından şehir seçersiniz.
 - Kıble ekranı, yönü göstermek için cihazın pusula/manyetometre sensörünü okur. Bu okuma
   da cihazdan dışarı çıkmaz.
+
+---
+
+## Bildirimler
+
+Bildirim izni **isteğe bağlıdır** ve uygulama bunu ilk açılışta değil, ihtiyaç duyulan yerde
+sorar: namaz vakitlerine bakarken ya da bir mevlit planı kaydettikten sonra. İzin vermezseniz
+uygulama bildirimsiz çalışmaya devam eder.
+
+Üç tür bildirim vardır ve her biri ayrı ayrı kapatılabilir:
+
+- **Ezan vakti** — hangi vakitler ve kaç dakika önce, sizin seçiminizdir.
+- **Mevlit hatırlatması** — yalnızca kendi kaydettiğiniz planlar için.
+- **Günün sözü** — bir ayet ve meali. Varsayılan olarak kapalıdır.
+
+**Bildirimlerin tamamı telefonunuzun içinde kurulur.** Push bildirimi kullanılmaz, bir
+bildirim sunucusu yoktur ve bildirimlerle ilgili hiçbir bilgi dışarı gönderilmez. Vakitler,
+Vakitler ekranıyla aynı şekilde cihazınızda hesaplanır.
+
+Telefonunuz yeniden başladığında kurulu bildirimlerin kaybolmaması için uygulama, yeniden
+başlatma bildirimini alma iznini kullanır. Bu izin yalnızca bildirim listesini yeniden
+kurmak için kullanılır.
+
+Bildirimleri uygulama içindeki Ayarlar → Bildirimler ekranından ya da telefonunuzun kendi
+ayarlarından tamamen kapatabilirsiniz.
 
 ---
 
