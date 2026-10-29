@@ -22,7 +22,7 @@ AdMob**; for players under 13 they are **child-directed and never personalised**
 ## Data that stays on your phone
 
 Everything the solo game remembers is stored **only on your phone** and is never sent to us:
-best score, games played, stars, characters, costumes, the recordings of your best games, and settings
+best score, games played, stars, characters, costumes, sky themes, badges, the daily gift, the recordings of your best games, and settings
 (language, sound, vibration).
 
 - **Age question:** on first launch the game asks for your **year of birth**. The year itself
@@ -47,7 +47,7 @@ With it, the following is stored:
 | **Adults only (18+):** a name you type yourself, if you choose to | Shown instead of the list name, **only to other adult players** |
 | Reports of typed names: who reported which name, and when | Removing names that several players report |
 | A country code taken from your phone's region setting (not from your IP address) | The "My country" leaderboard |
-| Your best scores per week and of all time, with a recording of that game (the course number and how long you held each jump) | The leaderboard; the server replays the game to check the score |
+| Your best scores per week, of all time and on the daily course, with a recording of that game (the course number and how long you held each jump) | The leaderboard; the server replays the game to check the score |
 | Races: course number, the two player IDs, room code, start time | Pairing two players |
 
 Your player name, country and best scores are **visible to other players** in the
@@ -55,13 +55,14 @@ leaderboard. A typed name must follow the rules shown in the game (3–14 letter
 swearing, links, phone numbers or contact details) and is checked by the server against a list
 of words that are not allowed. Players under 18 cannot type a name and never see typed names —
 they always see list names. Adults can report a typed name; a name reported by three players
-is removed, and after two removals that player can only use list names. During a race, only how long each jump was held is sent live to your opponent;
-these messages are **not stored**. If no player is found, you race a robot on your phone and
+is removed, and after two removals that player can only use list names. During a race, only how long each jump was held and the quick reactions you tap (a fixed set
+of emoji, no text) are sent live to your opponent; these messages are **not stored**. A rematch
+opens a new race room the same way as playing with a friend. If no player is found, you race a robot on your phone and
 nothing is sent.
 
 This data is kept with **Supabase**, the game's server provider (servers in the EU,
 Frankfurt), which may also keep short-lived technical logs (such as IP addresses) for
-security. Race entries are deleted after 1 day, weekly scores after 8 weeks. Your account and
+security. Race entries are deleted after 1 day, daily-course scores after 3 days, weekly scores after 8 weeks. Your account and
 all-time score are kept until you delete them. Reports are deleted after 60 days.
 
 ---
@@ -154,7 +155,7 @@ kişiselleştirilmez**.
 ### Yalnızca telefonunda kalanlar
 
 Tek kişilik oyunun hatırladığı her şey **yalnızca telefonunda** saklanır, bize gönderilmez:
-en iyi puan, oynanan oyun sayısı, yıldızlar, karakterler, kostümler, en iyi oyunlarının kayıtları ve
+en iyi puan, oynanan oyun sayısı, yıldızlar, karakterler, kostümler, gökyüzü temaları, rozetler, günlük hediye, en iyi oyunlarının kayıtları ve
 ayarlar (dil, ses, titreşim).
 
 - **Yaş sorusu:** ilk açılışta oyun **doğum yılını** sorar. Yılın kendisi saklanmaz; doğru
@@ -178,7 +179,7 @@ saklanır:
 | **Yalnızca yetişkinler (18+):** istersen kendi yazdığın bir ad | Listedeki adın yerine, **yalnızca diğer yetişkin oyunculara** gösterilir |
 | Yazılan adlar için bildirimler: kimin hangi adı ne zaman bildirdiği | Birkaç oyuncunun bildirdiği adları kaldırmak |
 | Telefonunun bölge ayarından alınan ülke kodu (IP adresinden değil) | "Ülkem" sıralaması |
-| Haftalık ve tüm zamanların en iyi puanların, o oyunun kaydıyla (parkur numarası ve her zıplamada ne kadar basılı tuttuğun) | Sıralama; sunucu puanı doğrulamak için oyunu yeniden oynatır |
+| Haftalık, tüm zamanların ve günün parkurundaki en iyi puanların, o oyunun kaydıyla (parkur numarası ve her zıplamada ne kadar basılı tuttuğun) | Sıralama; sunucu puanı doğrulamak için oyunu yeniden oynatır |
 | Yarışlar: parkur numarası, iki oyuncunun kimliği, oda kodu, başlangıç saati | İki oyuncuyu eşleştirmek |
 
 Oyuncu adın, ülken ve en iyi puanların sıralamada **diğer oyunculara görünür**. Yazılan ad
@@ -187,13 +188,14 @@ ve iletişim bilgisi olmaz) ve sunucuda izin verilmeyen kelimeler listesine gör
 yaşından küçükler ad yazamaz ve yazılan adları hiç görmez; onlar her zaman listedeki adları
 görür. Yetişkinler yazılan bir adı bildirebilir; üç oyuncunun bildirdiği ad kaldırılır, iki kez
 kaldırılan oyuncu yalnızca listeden ad seçebilir. Yarış
-sırasında rakibine yalnızca her zıplamada ne kadar basılı tuttuğun anında iletilir; bu
-mesajlar **saklanmaz**. Oyuncu bulunamazsa telefonunda bir robotla yarışırsın ve hiçbir şey
+sırasında rakibine yalnızca her zıplamada ne kadar basılı tuttuğun ve dokunduğun hazır
+tepkiler (sabit emojiler, yazı yok) anında iletilir; bu mesajlar **saklanmaz**. Rövanş, arkadaşla
+oynamaktaki gibi yeni bir yarış odası açar. Oyuncu bulunamazsa telefonunda bir robotla yarışırsın ve hiçbir şey
 gönderilmez.
 
 Bu veriler oyunun sunucu hizmeti **Supabase**'de tutulur (sunucular AB'de, Frankfurt);
 Supabase güvenlik için kısa süreli teknik kayıtlar (ör. IP adresi) da tutabilir. Yarış
-kayıtları 1 gün, haftalık puanlar 8 hafta sonra silinir. Hesabın ve tüm zamanların puanı sen
+kayıtları 1 gün, günün parkuru puanları 3 gün, haftalık puanlar 8 hafta sonra silinir. Hesabın ve tüm zamanların puanı sen
 silene kadar saklanır. Bildirimler 60 gün sonra silinir.
 
 ### Reklamlar
